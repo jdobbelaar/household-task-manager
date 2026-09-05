@@ -1,6 +1,6 @@
-from datetime import date
+from datetime import date, timedelta
 
-from django.http import HttpResponseNotAllowed
+from django.http import HttpResponseBadRequest, HttpResponseNotAllowed
 from django.shortcuts import get_object_or_404, redirect, render
 
 from . import duedates
@@ -58,6 +58,27 @@ def mark_done(request, task_id):
         task.last_note = note
 
     task.snooze_until = None
+    task.save()
+
+    return redirect(request.POST.get("next") or request.META.get("HTTP_REFERER", "/"))
+
+
+def snooze(request, task_id):
+    """Set snooze_until to today+days, or to an explicit date."""
+    if request.method != "POST":
+        return HttpResponseNotAllowed(["POST"])
+
+    task = get_object_or_404(Task, pk=task_id)
+
+    date_str = request.POST.get("date")
+    days_str = request.POST.get("days")
+    if date_str:
+        task.snooze_until = date.fromisoformat(date_str)
+    elif days_str:
+        task.snooze_until = date.today() + timedelta(days=int(days_str))
+    else:
+        return HttpResponseBadRequest("Provide either 'days' or 'date'.")
+
     task.save()
 
     return redirect(request.POST.get("next") or request.META.get("HTTP_REFERER", "/"))
