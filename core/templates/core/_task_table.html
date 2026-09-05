@@ -1,0 +1,28 @@
+{% if rows %}
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Due</th>
+      {% if show_status %}<th>Status</th>{% endif %}
+      <th>Note</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for row in rows %}
+    <tr>
+      <td>{{ row.task.name }}</td>
+      <td>{{ row.due_date }}</td>
+      {% if show_status %}
+      <td><span class="status-badge status-{{ row.status }}">{{ row.status }}</span></td>
+      {% endif %}
+      <td class="note">{{ row.task.last_note|default:"" }}</td>
+      <td>{% include "core/_task_actions.html" %}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% else %}
+<p class="empty">Nothing here.</p>
+{% endif %}

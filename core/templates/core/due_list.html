@@ -1,0 +1,23 @@
+{% extends "core/base.html" %}
+
+{% block title %}Due Tasks{% endblock %}
+
+{% block content %}
+<h1>Due Tasks</h1>
+<p>Showing what's due within {{ lookahead_days }} days.</p>
+
+<div class="bucket bucket-overdue">
+  <h2>Overdue ({{ buckets.overdue|length }})</h2>
+  {% include "core/_task_table.html" with rows=buckets.overdue %}
+</div>
+
+<div class="bucket bucket-due_today">
+  <h2>Due Today ({{ buckets.due_today|length }})</h2>
+  {% include "core/_task_table.html" with rows=buckets.due_today %}
+</div>
+
+<div class="bucket bucket-due_soon">
+  <h2>Due Soon ({{ buckets.due_soon|length }})</h2>
+  {% include "core/_task_table.html" with rows=buckets.due_soon %}
+</div>
+{% endblock %}

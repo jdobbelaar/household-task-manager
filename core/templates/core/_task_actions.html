@@ -1,0 +1,11 @@
+<form class="inline" method="post" action="{% url 'core:mark_done' row.task.id %}">
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ request.path }}">
+  <button type="submit">Done</button>
+</form>
+<form class="inline" method="post" action="{% url 'core:snooze' row.task.id %}">
+  {% csrf_token %}
+  <input type="hidden" name="next" value="{{ request.path }}">
+  <input type="hidden" name="days" value="7">
+  <button type="submit">Snooze 7d</button>
+</form>
