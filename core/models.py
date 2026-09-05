@@ -1,5 +1,7 @@
 from django.db import models
 
+from . import duedates
+
 
 class Task(models.Model):
     class RecurrenceType(models.TextChoices):
@@ -31,9 +33,9 @@ class Task(models.Model):
 
     # recurrence_type == "fixed"
     schedule = models.CharField(max_length=10, choices=Schedule.choices, null=True, blank=True)
-    day = models.CharField(max_length=3, choices=Weekday.choices, null=True, blank=True)
-    day_of_month = models.PositiveSmallIntegerField(null=True, blank=True)
-    month = models.PositiveSmallIntegerField(null=True, blank=True)
+    day = models.CharField(max_length=3, choices=Weekday.choices, null=True, blank=True)  # schedule == "weekly"
+    day_of_month = models.PositiveSmallIntegerField(null=True, blank=True)  # schedule == "monthly" or "yearly"
+    month = models.PositiveSmallIntegerField(null=True, blank=True)  # schedule == "yearly"
 
     last_done = models.DateField(null=True, blank=True)
     last_note = models.TextField(null=True, blank=True)
@@ -41,3 +43,15 @@ class Task(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_due_date(self, today=None):
+        """The recurrence-computed due date, ignoring any snooze_until override."""
+        return duedates.compute_due_date(self, today)
+
+    def get_effective_due_date(self, today=None):
+        """The due date actually used for status: snooze_until, when set, overrides the computed date."""
+        return duedates.effective_due_date(self, today)
+
+    def get_status(self, today=None, lookahead_days=7):
+        """One of duedates.OVERDUE, DUE_TODAY, DUE_SOON, NOT_DUE."""
+        return duedates.get_status(self, today, lookahead_days)

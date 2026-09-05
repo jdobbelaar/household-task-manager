@@ -6,8 +6,6 @@ from django.core.management.base import BaseCommand, CommandError
 
 from core.models import Task
 
-RECURRENCE_FIELDS = ["every_days", "every_months", "every_years", "schedule", "day", "day_of_month", "month"]
-
 
 class Command(BaseCommand):
     help = "Load/update Task rows from a tasks.yaml file (see _docs/plan.md for the format)."
@@ -32,11 +30,26 @@ class Command(BaseCommand):
 
         for entry in entries:
             recurrence = entry.get("recurrence", {})
-            fields = {field: recurrence.get(field) for field in RECURRENCE_FIELDS}
-            fields["recurrence_type"] = recurrence["type"]
-            fields["last_done"] = entry.get("last_done")
-            fields["last_note"] = entry.get("last_note")
-            fields["snooze_until"] = entry.get("snooze_until")
+            schedule = recurrence.get("schedule")
+            # In tasks.yaml, "day" means a weekday name for weekly schedules but a
+            # day-of-month number for yearly ones; day_of_month covers both here.
+            fields = {
+                "recurrence_type": recurrence["type"],
+                "every_days": recurrence.get("every_days"),
+                "every_months": recurrence.get("every_months"),
+                "every_years": recurrence.get("every_years"),
+                "schedule": schedule,
+                "day": recurrence.get("day") if schedule == "weekly" else None,
+                "day_of_month": (
+                    recurrence.get("day_of_month")
+                    if schedule == "monthly"
+                    else recurrence.get("day") if schedule == "yearly" else None
+                ),
+                "month": recurrence.get("month"),
+                "last_done": entry.get("last_done"),
+                "last_note": entry.get("last_note"),
+                "snooze_until": entry.get("snooze_until"),
+            }
 
             _, created = Task.objects.update_or_create(
                 name=entry["name"],
