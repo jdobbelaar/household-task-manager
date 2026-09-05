@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from datetime import date
+
+from django.http import HttpResponseNotAllowed
+from django.shortcuts import get_object_or_404, redirect, render
 
 from . import duedates
 from .models import Task
@@ -38,3 +41,23 @@ def due_list(request):
         "core/due_list.html",
         {"buckets": build_due_buckets(lookahead_days=lookahead_days), "lookahead_days": lookahead_days},
     )
+
+
+def mark_done(request, task_id):
+    """Set last_done (today, or a given date), optionally save a note, and clear snooze_until."""
+    if request.method != "POST":
+        return HttpResponseNotAllowed(["POST"])
+
+    task = get_object_or_404(Task, pk=task_id)
+
+    done_date_str = request.POST.get("date")
+    task.last_done = date.fromisoformat(done_date_str) if done_date_str else date.today()
+
+    note = request.POST.get("note", "").strip()
+    if note:
+        task.last_note = note
+
+    task.snooze_until = None
+    task.save()
+
+    return redirect(request.POST.get("next") or request.META.get("HTTP_REFERER", "/"))
