@@ -1,0 +1,500 @@
+tasks:
+- name: Update Utilities data in Recurring Payments
+  recurrence:
+    type: interval
+    every_months: 2
+  last_done: 2025-08-10
+  last_note: null
+  snooze_until: null
+- name: Kia Niro annual service
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2024-11-23
+  last_note: null
+  snooze_until: null
+- name: season pans
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2022-04-15
+  last_note: Coat lightly with veg oil (with low smoke point, like Flax seed), heat
+    on medium burner until smoke begins, cool, wipe away excess.
+  snooze_until: 2026-04-02
+- name: vacuum basement
+  recurrence:
+    type: interval
+    every_months: 6
+  last_done: 2025-10-04
+  last_note: null
+  snooze_until: null
+- name: HVAC Contract renewal
+  recurrence:
+    type: interval
+    every_years: 3
+  last_done: 2023-06-01
+  last_note: null
+  snooze_until: null
+- name: Winix carbon filter replace
+  recurrence:
+    type: interval
+    every_months: 3
+  last_done: 2026-03-21
+  last_note: null
+  snooze_until: null
+- name: sharpen lawnmower blade
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2025-06-25
+  last_note: null
+  snooze_until: null
+- name: clear laundry drain pump trap
+  recurrence:
+    type: interval
+    every_months: 3
+  last_done: 2026-03-29
+  last_note: null
+  snooze_until: null
+- name: moth trap, replace
+  recurrence:
+    type: interval
+    every_months: 3
+  last_done: 2026-04-11
+  last_note: null
+  snooze_until: null
+- name: Rotate mattress
+  recurrence:
+    type: interval
+    every_months: 3
+  last_done: 2026-05-31
+  last_note: null
+  snooze_until: null
+- name: house power wash, fall
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2022-10-15
+  last_note: null
+  snooze_until: 2026-09-01
+- name: Check fire extinguisher pressure off kitchen
+  recurrence:
+    type: interval
+    every_months: 3
+  last_done: 2026-06-14
+  last_note: null
+  snooze_until: null
+- name: Kitchen undersink filter, replace
+  recurrence:
+    type: interval
+    every_months: 6
+  last_done: 2026-03-21
+  last_note: null
+  snooze_until: null
+- name: Bathroom undersink filter, replace
+  recurrence:
+    type: interval
+    every_months: 6
+  last_done: 2026-03-21
+  last_note: null
+  snooze_until: null
+- name: replace batteries in basement stairs lamp
+  recurrence:
+    type: interval
+    every_months: 6
+  last_done: 2026-03-22
+  last_note: null
+  snooze_until: null
+- name: Dehumidifiers, basement, check drainage, press filter button
+  recurrence:
+    type: interval
+    every_months: 1
+  last_done: 2026-08-26
+  last_note: null
+  snooze_until: null
+- name: Scott's Phase 4 October application
+  recurrence:
+    type: fixed
+    schedule: yearly
+    month: 10
+    day: 1
+  last_done: 2025-10-25
+  last_note: null
+  snooze_until: 2026-10-01
+- name: lawn sprinkler blowout before freeze, Summit Ave
+  recurrence:
+    type: fixed
+    schedule: yearly
+    month: 10
+    day: 1
+  last_done: 2023-10-24
+  last_note: null
+  snooze_until: 2026-10-10
+- name: Check fire extinguisher pressure barn
+  recurrence:
+    type: interval
+    every_months: 3
+  last_done: 2026-07-16
+  last_note: null
+  snooze_until: null
+- name: Josh replace toothbrush
+  recurrence:
+    type: interval
+    every_months: 3
+  last_done: 2026-07-16
+  last_note: null
+  snooze_until: null
+- name: close hose bibs before freeze
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2025-10-17
+  last_note: null
+  snooze_until: null
+- name: process Robinhood alerts
+  recurrence:
+    type: interval
+    every_months: 2
+  last_done: 2026-08-20
+  last_note: null
+  snooze_until: null
+- name: replace anti-gunk tablet in condensation pump, 3rd floor
+  recurrence:
+    type: interval
+    every_months: 2
+  last_done: 2026-08-22
+  last_note: null
+  snooze_until: null
+- name: ElectroStatic array, rinse, basement
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2025-10-26
+  last_note: null
+  snooze_until: null
+- name: Scott's Phase 4 November 1" water-in
+  recurrence:
+    type: fixed
+    schedule: yearly
+    month: 11
+    day: 1
+  last_done: 2025-10-25
+  last_note: null
+  snooze_until: 2026-11-01
+- name: ElectroStatic washable filter, wash, 3rd floor
+  recurrence:
+    type: interval
+    every_months: 2
+  last_done: 2026-09-04
+  last_note: null
+  snooze_until: null
+- name: ElectroStatic washable filter, wash, basement
+  recurrence:
+    type: interval
+    every_months: 2
+  last_done: 2026-09-04
+  last_note: null
+  snooze_until: null
+- name: replace anti-gunk tablet in 3 condensation pumps in basement (furnace and
+    2 dehumidifiers)
+  recurrence:
+    type: interval
+    every_months: 2
+  last_done: 2026-09-04
+  last_note: null
+  snooze_until: null
+- name: Fall Gutter Cleaning
+  recurrence:
+    type: fixed
+    schedule: yearly
+    month: 11
+    day: 1
+  last_done: 2025-11-12
+  last_note: Robert Power - (617) 797-4273 - Arlington's Best Gutter Cleaning
+  snooze_until: null
+- name: Check fire extinguisher pressure 3rd floor
+  recurrence:
+    type: interval
+    every_months: 3
+  last_done: 2026-08-16
+  last_note: null
+  snooze_until: null
+- name: Coffee maker water filter replacement
+  recurrence:
+    type: interval
+    every_months: 6
+  last_done: 2026-06-10
+  last_note: null
+  snooze_until: null
+- name: purge gasoline from Snowblowers
+  recurrence:
+    type: fixed
+    schedule: yearly
+    month: 3
+    day: 1
+  last_done: 2026-04-18
+  last_note: null
+  snooze_until: 2027-01-01
+- name: update transfer schedule per tax estimated payments schedule
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2026-03-19
+  last_note: null
+  snooze_until: null
+- name: Tax Filing due April 15
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2026-03-19
+  last_note: null
+  snooze_until: null
+- name: Smoke detector batteries, replace 9V and AA (see list in Evernote)
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2026-03-21
+  last_note: https://www.evernote.com/client/web#/note/5bf381fb-9342-464a-a5ba-fd967c93df39
+  snooze_until: null
+- name: ElectroStatic array, rinse, 3rd floor
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2026-03-21
+  last_note: null
+  snooze_until: null
+- name: Winix HEPA filter replace, and reorder
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2026-03-21
+  last_note: null
+  snooze_until: null
+- name: Josh Eye Exam
+  recurrence:
+    type: interval
+    every_years: 2
+  last_done: 2025-03-24
+  last_note: null
+  snooze_until: null
+- name: Crabgrass suppression application
+  recurrence:
+    type: fixed
+    schedule: yearly
+    month: 4
+    day: 1
+  last_done: 2026-04-11
+  last_note: apply when the soil temperature is 55°F
+  snooze_until: 2027-04-01
+- name: grub control with 1" water-in
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2026-04-11
+  last_note: null
+  snooze_until: null
+- name: Umbrella Policy Renewal Due May 22
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2026-04-25
+  last_note: null
+  snooze_until: null
+- name: Homeowners Insurance renews May 25
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2026-04-25
+  last_note: null
+  snooze_until: null
+- name: lawn sprinkler restart?
+  recurrence:
+    type: fixed
+    schedule: yearly
+    month: 5
+    day: 1
+  last_done: 2022-06-10
+  last_note: Didn't need it in 2023, 2024, 2025, 2026
+  snooze_until: 2027-05-10
+- name: Spring Gutter Cleaning
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2026-06-12
+  last_note: Robert Power - (617) 797-4273 - Arlington's Best Gutter Cleaning
+  snooze_until: null
+- name: Kia Niro State Inspection by July 31
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2026-07-01
+  last_note: null
+  snooze_until: null
+- name: Snow Thrower Service
+  recurrence:
+    type: interval
+    every_years: 2
+  last_done: 2026-03-02
+  last_note: null
+  snooze_until: null
+- name: smoke detector in 6 Summit front hall downstairs, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2018-03-15
+  last_note: null
+  snooze_until: null
+- name: smoke detector in 6 Summit bottom of 3rd floor stairs, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2018-03-15
+  last_note: null
+  snooze_until: null
+- name: smoke detector in 6 Summit 3rd floor left, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2018-03-15
+  last_note: null
+  snooze_until: null
+- name: CO Detector in 6 Summit front hall up, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2018-03-21
+  last_note: null
+  snooze_until: null
+- name: descale tankless hot water system
+  recurrence:
+    type: interval
+    every_years: 2
+  last_done: 2026-03-21
+  last_note: null
+  snooze_until: null
+- name: smoke & CO detector in 6 Summit 3rd floor center, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2020-03-15
+  last_note: null
+  snooze_until: null
+- name: smoke & CO detector in 6 Summit bottom of basement stairs, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2020-03-15
+  last_note: null
+  snooze_until: null
+- name: CO Detector in 6 Summit basement, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2020-04-21
+  last_note: null
+  snooze_until: null
+- name: CO Detector in Living Room, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2020-04-21
+  last_note: null
+  snooze_until: null
+- name: CO Detector outside Master bedroom, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2020-04-21
+  last_note: null
+  snooze_until: null
+- name: Replace external hard drive
+  recurrence:
+    type: interval
+    every_years: 5
+  last_done: 2025-06-10
+  last_note: null
+  snooze_until: null
+- name: CO Detector in 6 Summit front hall down, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2021-03-21
+  last_note: null
+  snooze_until: null
+- name: smoke detector in 6 Summit top of basement stairs, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2022-03-15
+  last_note: Kidde i9010
+  snooze_until: null
+- name: smoke & CO detector in 6 Summit outside master bedroom, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2022-03-15
+  last_note: null
+  snooze_until: null
+- name: smoke & CO detector in 6 Summit garage left, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2022-03-15
+  last_note: null
+  snooze_until: null
+- name: smoke & CO detector in 6 Summit garage right, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2022-03-15
+  last_note: null
+  snooze_until: null
+- name: smoke detector in 6 Summit 3rd floor right, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2025-03-30
+  last_note: null
+  snooze_until: null
+- name: smoke detector in 6 Summit kitchen, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2025-03-30
+  last_note: null
+  snooze_until: null
+- name: smoke detector in 6 Summit front hall upstairs, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2025-03-30
+  last_note: null
+  snooze_until: null
+- name: smoke detector in 6 Summit master bedroom, replace
+  recurrence:
+    type: interval
+    every_years: 10
+  last_done: 2025-03-30
+  last_note: null
+  snooze_until: null
+- name: Replace lower gas furnace
+  recurrence:
+    type: interval
+    every_years: 15
+  last_done: 2025-10-05
+  last_note: null
+  snooze_until: null
+- name: Replace upper gas furnace
+  recurrence:
+    type: interval
+    every_years: 15
+  last_done: 2025-10-05
+  last_note: null
+  snooze_until: null
+- name: power wash 6 Summit, spring
+  recurrence:
+    type: interval
+    every_years: 1
+  last_done: 2022-04-15
+  last_note: Skipped Spring 2023
+  snooze_until: 2024-04-15
